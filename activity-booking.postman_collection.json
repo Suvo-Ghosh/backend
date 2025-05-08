@@ -1,0 +1,159 @@
+{
+    "info": {
+        "_postman_id": "7382ccba-146a-49d9-81de-0f08088636d7",
+        "name": "Activity Booking API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "44796316",
+        "_collection_link": "https://suvo-6285189.postman.co/workspace/Suvo's-Workspace~9e5a0037-e5e9-4f01-8998-f5cad750bc06/collection/44796316-7382ccba-146a-49d9-81de-0f08088636d7?action=share&source=collection_link&creator=44796316"
+    },
+    "item": [
+        {
+            "name": "Register",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n  \"name\": \"Suvo\",\r\n  \"email\": \"suvo@example.com\",\r\n  \"phone\": \"9641800664\",\r\n  \"password\": \"password@123\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:4000/api/auth/register",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "4000",
+                    "path": [
+                        "api",
+                        "auth",
+                        "register"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Login",
+            "request": {
+                "auth": {
+                    "type": "noauth"
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n  \"email\": \"suvo@example.com\",\r\n  \"password\": \"password@123\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:4000/api/auth/login",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "4000",
+                    "path": [
+                        "api",
+                        "auth",
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "List Activities",
+            "request": {
+                "auth": {
+                    "type": "noauth"
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:4000/api/activities",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "4000",
+                    "path": [
+                        "api",
+                        "activities"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Book Activity",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MWQwYjY1MWNiODU2M2ZlNmQxNjBhMyIsImlhdCI6MTc0NjczNTkyMCwiZXhwIjoxNzQ3MzQwNzIwfQ.cBs4BeqZLl2VuMxFBxTJ7Nwzov3Rx9oVXQKihPSGWQ8",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "POST",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:4000/api/bookings/681d1e09cc3fe5fc7807011d",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "4000",
+                    "path": [
+                        "api",
+                        "bookings",
+                        "681d1e09cc3fe5fc7807011d"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "My Activity",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MWQwYjY1MWNiODU2M2ZlNmQxNjBhMyIsImlhdCI6MTc0NjczNTkyMCwiZXhwIjoxNzQ3MzQwNzIwfQ.cBs4BeqZLl2VuMxFBxTJ7Nwzov3Rx9oVXQKihPSGWQ8",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:4000/api/bookings/me",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "4000",
+                    "path": [
+                        "api",
+                        "bookings",
+                        "me"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

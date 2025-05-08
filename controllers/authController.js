@@ -1,6 +1,9 @@
 import User from '../models/User.js';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const generateToken = (userId) => {
     return jwt.sign({ id: userId }, process.env.JWT_SECRET, {
@@ -25,7 +28,7 @@ export const registerUser = async (req, res) => {
             token: generateToken(user._id),
         });
     } catch (error) {
-        res.status(500).json({ message: 'Server error' });
+        res.status(500).json({ message: 'Server errors' });
     }
 };
 
@@ -45,7 +48,7 @@ export const loginUser = async (req, res) => {
             token: generateToken(user._id),
         });
     } catch (error) {
-        res.status(500).json({ message: 'Server error' });
+        res.status(500).json({ message: 'Server errors', error: error });
     }
 };
 
@@ -54,6 +57,6 @@ export const getProfile = async (req, res) => {
         const user = await User.findById(req.user.id).select('-password');
         res.json(user);
     } catch (error) {
-        res.status(500).json({ message: 'Server error' });
+        res.status(500).json({ message: 'Server error', error: error });
     }
 };

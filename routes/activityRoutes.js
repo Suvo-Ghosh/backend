@@ -4,8 +4,8 @@ import { protect } from '../middlewares/authMiddleware.js';
 
 const router = express.Router();
 
-router.post('/', protect, createActivity); // Authenticated users can create
-router.get('/', getAllActivities);         // Public listing
-router.get('/:id', getActivityById);       // Single activity
+router.post('/', protect, createActivity);
+router.get('/', getAllActivities);
+router.get('/:id', getActivityById);
 
 export default router;

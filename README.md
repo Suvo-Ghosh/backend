@@ -1,6 +1,6 @@
 #  Basic Activity Booking App – Backend API
 
-A simple REST API backend for booking activities like cricket, movies, and football matches. Built as part of the MeetX Backend Developer Internship assignment.
+A simple REST API backend for booking activities like cricket , yoga etc. Built as part of the MeetX Backend Developer Internship assignment.
 
 ##  Features
 
@@ -27,6 +27,7 @@ A simple REST API backend for booking activities like cricket, movies, and footb
 backend/
 │
 ├── app.js
+├── activity-booking.postman_collection.json
 ├── .env
 ├── config/
 │   └── mongoConnection.js
@@ -45,8 +46,7 @@ backend/
 ├── middlewares/
 │   ├── validate.js
 │   └── authMiddleware.js
-└── postman/
-    └── activity-booking.postman_collection.json
+└── 
 ```
 
 ##  Setup Instructions
@@ -81,7 +81,7 @@ backend/
 | GET    | `/api/bookings/me`     | Protected | Get all bookings by current user|
 
 ## Postman Collection
--  You can find the collection JSON file inside the `postman/` folder.
+-  You can find the collection JSON file `activity-booking.postman_collection.json`.
 
  - Import it into Postman to test all endpoints quickly.
 

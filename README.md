@@ -4,7 +4,7 @@ A simple REST API backend for booking activities like cricket , yoga etc. Built 
 
 ##  Features
 
--  User Registration & Login (JWT-based authentication)
+-  User Registration & Login (`JWT`-based authentication)
 -  List all available activities (public)
 -  Book an activity (authorized users)
 -  View all bookings by logged-in user
@@ -43,10 +43,10 @@ backend/
 │   ├── User.js
 │   ├── Activity.js
 │   └── Booking.js
-├── middlewares/
-│   ├── validate.js
-│   └── authMiddleware.js
-└── 
+└── middlewares/
+    ├── validate.js
+    └── authMiddleware.js
+  
 ```
 
 ##  Setup Instructions
@@ -62,7 +62,7 @@ backend/
    ```
 3. **Add environment variables**  
    ```bash
-   PORT=5000
+   PORT=4000
    MONGOOSE_URL=mongodb://localhost:27017
    JWT_SECRET=your_jwt_secret_key
    ```
@@ -84,6 +84,13 @@ backend/
 -  You can find the collection JSON file `activity-booking.postman_collection.json`.
 
  - Import it into Postman to test all endpoints quickly.
+
+## Deployment
+
+The backend API for the Activity Booking App is deployed on `Render` and can be accessed live at the following URL:
+
+### Live URL :
+[https://activity-booking-z8lm.onrender.com](https://activity-booking-z8lm.onrender.com)
 
 
 
